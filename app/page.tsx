@@ -155,7 +155,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: "2rem" }}>
+              <div className="categories-grid">
                 {CATEGORIES.map(c => {
                   const cat = result.categories[c.key] || {};
                   const s = Math.round(cat.score || 0);
@@ -204,6 +204,8 @@ export default function Home() {
         .btn-analizar:disabled { background: #2a2a2a; color: #555; cursor: not-allowed; }
         input::placeholder { color: #444; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        .categories-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 2rem; }
+        @media (max-width: 600px) { .categories-grid { grid-template-columns: 1fr 1fr; } }
       `}</style>
     </main>
   );
