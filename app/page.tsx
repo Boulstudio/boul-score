@@ -115,7 +115,7 @@ export default function Home() {
               Boul Score
             </span>
           </div>
-          <h1 style={{ fontFamily: "Syne, sans-serif", fontWeight: 800, fontSize: 36,
+          <h1 style={{ fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 40,
             lineHeight: 1.15, margin: "0 0 1rem", letterSpacing: "-1px" }}>
             ¿Tu web está perdiendo clientes?
           </h1>
@@ -144,7 +144,7 @@ export default function Home() {
               padding: "0 24px", height: 48,
               background: loading || !url ? "#2a2a2a" : "#7C3AED",
               color: loading || !url ? "#555" : "#fff",
-              border: "none", borderRadius: 8,
+              border: "none", borderRadius: 100,
               cursor: loading ? "not-allowed" : "pointer",
               transition: "background 0.15s",
               whiteSpace: "nowrap",
