@@ -123,17 +123,7 @@ export default function Home() {
               borderRadius: 8, outline: "none", color: "#fff",
             }}
           />
-          <button onClick={analyze} disabled={loading || !url}
-            style={{
-              fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: 13,
-              padding: "0 24px", height: 48,
-              background: loading || !url ? "#2a2a2a" : "#7C3AED",
-              color: loading || !url ? "#555" : "#fff",
-              transition: "background 0.2s",
-              border: "none", borderRadius: 100,
-              cursor: loading ? "not-allowed" : "pointer",
-              whiteSpace: "nowrap",
-            }}>
+          <button onClick={analyze} disabled={loading || !url} className="btn-analizar">
             {loading ? "Analizando…" : "Analizar"}
           </button>
         </div>
@@ -209,9 +199,9 @@ export default function Home() {
       </div>
       <style>{`
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-        .btn-analizar { background: #7C3AED !important; }
-        .btn-analizar:hover { background: #5F2BB8 !important; }
-        .btn-analizar:disabled { background: #2a2a2a !important; }
+        .btn-analizar { background: #7C3AED; border: none; border-radius: 100px; color: #fff; font-family: Syne, sans-serif; font-weight: 700; font-size: 13px; padding: 0 28px; height: 48px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+        .btn-analizar:hover { background: #5F2BB8; }
+        .btn-analizar:disabled { background: #2a2a2a; color: #555; cursor: not-allowed; }
         input::placeholder { color: #444; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
       `}</style>
