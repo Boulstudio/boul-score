@@ -129,12 +129,12 @@ export default function Home() {
               padding: "0 24px", height: 48,
               background: loading || !url ? "#2a2a2a" : "#7C3AED",
               color: loading || !url ? "#555" : "#fff",
+              transition: "background 0.2s",
               border: "none", borderRadius: 100,
               cursor: loading ? "not-allowed" : "pointer",
-              transition: "background 0.15s",
               whiteSpace: "nowrap",
             }}>
-            {loading ? "Analizando…" : "Analizar →"}
+            {loading ? "Analizando…" : "Analizar"}
           </button>
         </div>
 
@@ -209,6 +209,9 @@ export default function Home() {
       </div>
       <style>{`
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+        .btn-analizar { background: #7C3AED !important; }
+        .btn-analizar:hover { background: #5F2BB8 !important; }
+        .btn-analizar:disabled { background: #2a2a2a !important; }
         input::placeholder { color: #444; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
       `}</style>
