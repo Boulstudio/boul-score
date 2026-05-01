@@ -223,7 +223,7 @@ export default function Home() {
             <div style={{ background: "#7C3AED", borderRadius: 12, padding: "1.5rem 1.75rem",
               display: "flex", alignItems: "center", justifyContent: "space-between", gap: "1rem" }}>
               <div>
-                <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 800, fontSize: 16,
+                <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 16,
                   color: "#fff", marginBottom: 4, letterSpacing: "-0.3px" }}>
                   ¿Quieres arreglarlo?
                 </div>
@@ -235,7 +235,7 @@ export default function Home() {
                 style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: 12,
                   padding: "10px 20px", background: "#fff", color: "#7C3AED",
                   borderRadius: 100, textDecoration: "none", whiteSpace: "nowrap", flexShrink: 0 }}>
-                Agenda un diagnóstico →
+                Agenda un diagnóstico
               </a>
             </div>
           </div>
