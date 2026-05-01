@@ -82,7 +82,7 @@ export default function Home() {
   return (
     <main style={{
       fontFamily: "Epilogue, sans-serif",
-      background: "#0F1115",
+      background: "#0F1115" /* boul */,
       minHeight: "100vh",
       color: "#ffffff",
       padding: "0",
@@ -171,7 +171,7 @@ export default function Home() {
                   const s = Math.round(cat.score || 0);
                   const col = scoreColor(s);
                   return (
-                    <div key={c.key} style={{ background: "#0F1115", border: "1px solid #222", borderRadius: 8, padding: "12px 14px" }}>
+                    <div key={c.key} style={{ background: "#0F1115" /* boul */, border: "1px solid #222", borderRadius: 8, padding: "12px 14px" }}>
                       <div style={{ fontSize: 10, fontWeight: 500, color: "#555", textTransform: "uppercase",
                         letterSpacing: "0.8px", marginBottom: 8 }}>{c.label}</div>
                       <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 22, color: col, marginBottom: 6 }}>
