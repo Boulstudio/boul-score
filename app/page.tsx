@@ -89,21 +89,6 @@ export default function Home() {
     }}>
       <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Epilogue:wght@400;500&display=swap" rel="stylesheet" />
 
-      <nav style={{
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        padding: "1.25rem 2.5rem", borderBottom: "1px solid #222",
-      }}>
-        <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 800, fontSize: 18, color: "#fff", letterSpacing: "-0.5px" }}>
-          ✦ BOUL
-        </div>
-        <a href="https://studioboul.framer.website" target="_blank"
-          style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: 13,
-            background: "#7C3AED", color: "#fff", padding: "8px 20px",
-            borderRadius: 100, textDecoration: "none", letterSpacing: "0.2px" }}>
-          Agenda un diagnóstico
-        </a>
-      </nav>
-
       <div style={{ maxWidth: 700, margin: "0 auto", padding: "4rem 1.5rem 3rem" }}>
 
         <div style={{ marginBottom: "2.5rem" }}>
