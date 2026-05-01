@@ -37,7 +37,7 @@ function Dial({ score }: { score: number }) {
           strokeDasharray={`${dash} ${circ}`} strokeLinecap="round" />
       </svg>
       <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center",
-        fontFamily: "Syne, sans-serif", fontWeight: 800, fontSize: 26, color }}>
+        fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 26, color }}>
         {score}
       </div>
     </div>
@@ -172,7 +172,7 @@ export default function Home() {
                 paddingBottom: "1.5rem", borderBottom: "1px solid #222" }}>
                 <Dial score={Math.round(result.overall)} />
                 <div>
-                  <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 800, fontSize: 22,
+                  <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 22,
                     color: scoreColor(result.overall), marginBottom: 6, letterSpacing: "-0.5px" }}>
                     {scoreLabel(result.overall)}
                   </div>
@@ -189,7 +189,7 @@ export default function Home() {
                     <div key={c.key} style={{ background: "#141414", border: "1px solid #222", borderRadius: 8, padding: "12px 14px" }}>
                       <div style={{ fontSize: 10, fontWeight: 500, color: "#555", textTransform: "uppercase",
                         letterSpacing: "0.8px", marginBottom: 8 }}>{c.label}</div>
-                      <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 800, fontSize: 22, color: col, marginBottom: 6 }}>
+                      <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 22, color: col, marginBottom: 6 }}>
                         {s}<span style={{ fontSize: 11, fontWeight: 400, color: "#444" }}>/100</span>
                       </div>
                       <div style={{ height: 2, borderRadius: 2, background: "#222" }}>
