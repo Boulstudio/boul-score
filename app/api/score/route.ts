@@ -4,29 +4,14 @@ export async function POST(req: NextRequest) {
   const { url } = await req.json();
   if (!url) return NextResponse.json({ error: "URL requerida" }, { status: 400 });
 
-  const prompt = `Eres el analizador de sitios web de Boul Studio, una agencia de diseño web de alto estándar especializada en conversión para LATAM. Tu criterio es estricto y profesional, similar al de un diseñador senior con experiencia en agencias internacionales.
-
-Analiza: ${url}
-
-CRITERIOS (sé muy exigente, la mayoría de sitios LATAM tienen problemas serios):
-
-1. conversion: CTAs visibles con contraste, jerarquía clara, flujo hacia acción. Penaliza si no hay CTA en el hero.
-2. confianza: Testimonios con foto y nombre, casos de éxito con resultados, contacto visible.
-3. diseno: CRITERIO MUY ESTRICTO. Penaliza: tipografía inconsistente, paleta sin coherencia, imágenes de stock genéricas, layouts desbalanceados, falta de whitespace, mezcla de estilos. Escala: 0-20 amateur, 21-40 básico (mayoría pymes LATAM), 41-60 aceptable con inconsistencias, 61-75 bueno, 76-90 nivel agencia, 91-100 excepcional.
-4. copy: Claridad en 5 segundos, beneficios concretos, tono para el mercado.
-5. velocidad: Imágenes sin optimizar, sliders pesados, videos autoplay.
-6. presencia: Google Maps, redes activas, reseñas visibles.
-
-Responde SOLO con JSON sin markdown: {"overall":número,"summary":"frase corta","categories":{"conversion":{"score":número,"summary":"frase"},"confianza":{"score":número,"summary":"frase"},"diseno":{"score":número,"summary":"frase"},"copy":{"score":número,"summary":"frase"},"velocidad":{"score":número,"summary":"frase"},"presencia":{"score":número,"summary":"frase"}},"issues":[{"severity":"alta|media|baja","category":"categoría","title":"título","desc":"recomendación"}]}
-
-Genera 4-6 issues de mayor a menor impacto.`;
+  const prompt = "Eres el analizador de Boul Studio, agencia de diseno web para LATAM. Criterio muy estricto.\n\nAnaliza: " + url + "\n\nCRITERIOS:\n1. conversion: CTAs visibles, jerarquia clara, flujo hacia accion.\n2. confianza: Testimonios con foto y nombre, contacto visible.\n3. diseno: CRITERIO MUY ESTRICTO. Escala: 0-20 amateur, 21-40 basico pymes LATAM, 41-60 aceptable, 61-75 bueno, 76-90 nivel agencia, 91-100 excepcional. Penaliza tipografia inconsistente, colores sin coherencia, imagenes de stock, falta de whitespace, layouts desbalanceados.\n4. copy: Claridad en 5 segundos, beneficios vs features.\n5. velocidad: Imagenes pesadas, sliders, videos autoplay.\n6. presencia: Google Maps, redes activas, resenas Google.\n\nResponde SOLO con JSON valido sin markdown ni texto extra: {\"overall\":0,\"summary\":\"frase\",\"categories\":{\"conversion\":{\"score\":0,\"summary\":\"frase\"},\"confianza\":{\"score\":0,\"summary\":\"frase\"},\"diseno\":{\"score\":0,\"summary\":\"frase\"},\"copy\":{\"score\":0,\"summary\":\"frase\"},\"velocidad\":{\"score\":0,\"summary\":\"frase\"},\"presencia\":{\"score\":0,\"summary\":\"frase\"}},\"issues\":[{\"severity\":\"alta\",\"category\":\"cat\",\"title\":\"titulo\",\"desc\":\"desc\"}]}\n\nGenera 4-6 issues reales de mayor a menor impacto. Reemplaza todos los 0 con scores reales.";
 
   try {
     const resp = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": process.env.ANTHROPIC_API_KEY!,
+        "x-api-key": process.env.ANTHROPIC_API_KEY,
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
