@@ -82,7 +82,7 @@ export default function Home() {
   return (
     <main style={{
       fontFamily: "Epilogue, sans-serif",
-      background: "#141414",
+      background: "#0F1115",
       minHeight: "100vh",
       color: "#ffffff",
       padding: "0",
@@ -171,7 +171,7 @@ export default function Home() {
                   const s = Math.round(cat.score || 0);
                   const col = scoreColor(s);
                   return (
-                    <div key={c.key} style={{ background: "#141414", border: "1px solid #222", borderRadius: 8, padding: "12px 14px" }}>
+                    <div key={c.key} style={{ background: "#0F1115", border: "1px solid #222", borderRadius: 8, padding: "12px 14px" }}>
                       <div style={{ fontSize: 10, fontWeight: 500, color: "#555", textTransform: "uppercase",
                         letterSpacing: "0.8px", marginBottom: 8 }}>{c.label}</div>
                       <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 22, color: col, marginBottom: 6 }}>
@@ -204,27 +204,8 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
-            <div style={{ background: "#7C3AED", borderRadius: 12, padding: "1.5rem 1.75rem",
-              display: "flex", alignItems: "center", justifyContent: "space-between", gap: "1rem" }}>
-              <div>
-                <div style={{ fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 16,
-                  color: "#fff", marginBottom: 4, letterSpacing: "-0.3px" }}>
-                  ¿Quieres arreglarlo?
-                </div>
-                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
-                  Boul convierte tu sitio en una máquina de conseguir clientes.
-                </div>
-              </div>
-              <a href="https://studioboul.framer.website" target="_blank"
-                style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: 12,
-                  padding: "10px 20px", background: "#fff", color: "#7C3AED",
-                  borderRadius: 100, textDecoration: "none", whiteSpace: "nowrap", flexShrink: 0 }}>
-                Agenda un diagnóstico
-              </a>
-            </div>
-          </div>
-        )}
+          )}
+        
       </div>
       <style>{`
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
