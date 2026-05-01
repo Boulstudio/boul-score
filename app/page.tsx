@@ -84,7 +84,6 @@ export default function Home() {
       fontFamily: "Epilogue, sans-serif",
       background: "#0F1115",
       minHeight: "100vh",
-      background: "#0F1115",
       color: "#ffffff",
       padding: "0",
     }}>
