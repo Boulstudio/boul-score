@@ -199,7 +199,7 @@ export default function Home() {
       </div>
       <style>{`
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-        .btn-analizar { background: #7C3AED; border: none; border-radius: 100px; color: #fff; font-family: Syne, sans-serif; font-weight: 700; font-size: 13px; padding: 0 28px; height: 48px; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+        .btn-analizar { background: #7C3AED; border: none; border-radius: 100px; color: #fff; font-family: Syne, sans-serif; font-weight: 700; font-size: 13px; padding: 0 20px; height: 48px; cursor: pointer; transition: background 0.2s; white-space: nowrap; min-width: 110px; }
         .btn-analizar:hover { background: #5F2BB8; }
         .btn-analizar:disabled { background: #2a2a2a; color: #555; cursor: not-allowed; }
         input::placeholder { color: #444; }
