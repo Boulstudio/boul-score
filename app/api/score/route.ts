@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
   if (!url) return NextResponse.json({ error: "URL requerida" }, { status: 400 });
 
   const prompt = [
-    "Eres el analizador de Boul Studio, agencia de diseno web para LATAM. Criterio muy estricto y profesional.",
+    "Eres el analizador de Boul Studio, agencia de diseno web para LATAM. Tu criterio es estricto pero contextual: primero identifica el tipo de sitio (pyme LATAM, agencia, SaaS, enterprise, ecommerce, institucional) y aplica el estandar correspondiente. Sitios SaaS enterprise o agencias internacionales bien ejecutados merecen 75-90. Pymes LATAM tipicas deben evaluarse con estandar LATAM donde 60+ ya es bueno. No apliques el mismo rasero a todos.",
     "",
     "Analiza este sitio web: " + url,
     "",
